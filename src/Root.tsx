@@ -1,17 +1,17 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import { WeaveFFI, TOTAL_DURATION } from "./weaveffi/WeaveFFI";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="MyComp"
-        component={MyComposition}
-        durationInFrames={60}
+        id="WeaveFFI-v030"
+        component={WeaveFFI}
+        durationInFrames={TOTAL_DURATION}
         fps={30}
-        width={1280}
-        height={720}
+        width={1920}
+        height={1080}
       />
     </>
   );
