@@ -1,6 +1,10 @@
 import "./index.css";
 import { Composition, Folder } from "remotion";
 import { WeaveFFI, TOTAL_DURATION as WeaveFFI_v030_DURATION } from "./weaveffi/v0.3.0/WeaveFFI";
+import {
+  WeaveFFIImage,
+  TOTAL_DURATION as WeaveFFIImage_DURATION,
+} from "./weaveffi/image-everywhere/WeaveFFIImage";
 import { Wybthon, TOTAL_DURATION as Wybthon_v0200_DURATION } from "./wybthon/v0.20.0/Wybthon";
 import { PythonNative } from "./pythonnative/v0.6.0/PythonNative";
 import { Hydrateless } from "./hydrateless/v0.3.0/Hydrateless";
@@ -13,6 +17,14 @@ export const RemotionRoot: React.FC = () => {
           id="WeaveFFI-v0-3-0"
           component={WeaveFFI}
           durationInFrames={WeaveFFI_v030_DURATION}
+          fps={30}
+          width={1920}
+          height={1080}
+        />
+        <Composition
+          id="WeaveFFI-Image-Everywhere"
+          component={WeaveFFIImage}
+          durationInFrames={WeaveFFIImage_DURATION}
           fps={30}
           width={1920}
           height={1080}
